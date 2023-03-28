@@ -5,4 +5,5 @@ const postSchema=new mongoose.Schema({
     image:String
 
 });
+
 module.exports=mongoose.model('post',postSchema);
