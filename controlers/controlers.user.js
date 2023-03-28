@@ -1,6 +1,6 @@
 const user=require("../models/user.js");
-
-const newUser= new user({
+const userControler=(req,res)=>{
+    const newUser= new user({
     username:req.body.username,
     email:req.body.email,
     password:req.body.password
@@ -12,4 +12,5 @@ newUser.save().then(data=>{
 .catch(err=>{
     res.status(500).send("some error occourd")
 
-})
+})}
+module.exports=userControler;
