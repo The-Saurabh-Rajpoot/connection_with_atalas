@@ -1,0 +1,11 @@
+const express=require("express");
+const {userRegister,userLogin}=require("../controlers/controlers.user.js");
+const {postControler,updatePost,findAllPost,deleteByid}=require("../controlers/controlers.post");
+const router=express.Router();
+router.get("/posts",findAllPost);
+router.post("/register",userRegister);
+router.post("/login",userLogin);
+router.post("/posts",postControler);
+router.put("/posts/:id",updatePost);
+router.delete("/posts/:id",deleteByid);
+module.exports=router;
