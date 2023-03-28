@@ -29,4 +29,5 @@ userSchema.pre('save',async function(next){
     user.password=hasedPassword;
     next();
 })
+
 module.exports=mongoose.model("user",userSchema);
