@@ -34,5 +34,4 @@ const userLogin=async (req,res)=>{
    res.status(200).json({messege:"succfully login",token:`${token}`})
    
 }
-
 module.exports={userRegister,userLogin};
