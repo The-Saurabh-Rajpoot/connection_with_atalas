@@ -10,7 +10,7 @@ const userRegister=(req,res)=>{
 });
 newUser.save().then(data=>{
     
-        res.status(200).send(data);
+        res.status(200).send("success fully registerd");
 })
 .catch(err=>{
     res.status(500).send("some error occourd")
@@ -20,7 +20,6 @@ const userLogin=async (req,res)=>{
     const password=req.body.password;
     const username=req.body.username;
    const userData= await user.findOne({username:username});
-   console.log(userData);
    if(!userData){
     res.status(404).send("user not found");
     return

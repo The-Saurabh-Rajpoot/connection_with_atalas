@@ -4,7 +4,6 @@ const postSchema=new mongoose.Schema({
     body:String,
     image:String,
     user:String
-
 });
 
 module.exports=mongoose.model('post',postSchema);
